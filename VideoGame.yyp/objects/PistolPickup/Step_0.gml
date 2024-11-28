@@ -1,0 +1,35 @@
+y = ystart + sin(get_timer()/500000)*5;
+if (instance_exists(oPlayer))
+{
+
+	
+	if (point_in_circle(oPlayer.x,oPlayer.y,x,y,50)) && keyboard_check_pressed(ord("F"))
+	{
+		 if (global.hasgun = false) instance_create_layer(oPlayer.x,oPlayer.y,"Gun",oGun);
+						
+		with (oGun)
+		{
+			pistol = true;
+			if (fullauto = true)
+			{
+			instance_create_layer(oPlayer.x,oPlayer.y,"Gun",MGunPickup);
+			fullauto = false;
+			}
+			
+			if (shotgun = true)
+			{
+			instance_create_layer(oPlayer.x,oPlayer.y,"Gun",ShotgunPickup);
+			shotgun = false;
+			}
+		
+			if (rifle = true)
+			{
+			instance_create_layer(oPlayer.x,oPlayer.y,"Gun",RiflePickup);
+			rifle = false;
+			}
+		}
+		audio_play_sound(GunPickup,1,false);
+	instance_destroy();
+	
+	}
+}

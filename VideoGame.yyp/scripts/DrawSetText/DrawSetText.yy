@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"DrawSetText",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DrawSetText",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

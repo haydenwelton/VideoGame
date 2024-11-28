@@ -1,0 +1,1 @@
+audio_play_sound(HauntedGame,10,true);
